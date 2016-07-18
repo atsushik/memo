@@ -1,0 +1,21 @@
++ 状態の確認
+```
+rfkill list
+```
+とすると↓のように出る。yesになっているのは使えなくなっている状態
+```
+0: sunxi-bt: Bluetooth
+	Soft blocked: yes
+	Hard blocked: no
+1: phy0: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+2: phy1: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+```
++ 状態の変更
+bluetoothを使えるようにする
+```
+rfkill unblock bluetooth
+```
