@@ -11,3 +11,5 @@ cat /etc/nv_tegra_release
 # Jetson TX1でneural talk2を動かす
 # http://qiita.com/mana-murakami/items/509c1610f1b90d9fbf93
 
+# 手のひらスパコンでKeras-Tensorflowを使ってみる
+# http://qiita.com/ebonyeye/items/78f3139968ecb23b920a
