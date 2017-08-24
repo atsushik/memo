@@ -1,0 +1,11 @@
+
+JETSON TK1のセットアップ(JETPACK, GRINCH, ROS JADEのインストール)
+https://daichiahl.wordpress.com/2016/07/18/jetson-tk1のセットアップ/
+
+
+Jetson TK1 で mini PCI-Express カードによる無線LAN 接続を行う方法
+http://rabbit-note.com/2014/08/16/jetson-tk1-use-intel-7260/
+
+Now you can continue to download the file: 
+https://developer.nvidia.com/user
+
