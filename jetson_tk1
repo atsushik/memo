@@ -1,0 +1,4 @@
+# How do I know what version of L4T my Jetson TK1 is running?
+# https://devtalk.nvidia.com/default/topic/860092/jetson-tk1/how-do-i-know-what-version-of-l4t-my-jetson-tk1-is-running-/
+cat /etc/nv_tegra_release
+
