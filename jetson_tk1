@@ -4,3 +4,6 @@ cat /etc/nv_tegra_release
 
 # [NVIDIA Jetson TX1] Boot Ubuntu from SATA HDD
 # http://qiita.com/furushchev/items/a95acd598b7106fd52ba
+
+# OpenCV3.1をcontribを含めてbuildするための情報
+# http://qiita.com/nonbiri15/items/ce865a13dc6cba658ccf
