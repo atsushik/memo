@@ -2,3 +2,5 @@
 # https://devtalk.nvidia.com/default/topic/860092/jetson-tk1/how-do-i-know-what-version-of-l4t-my-jetson-tk1-is-running-/
 cat /etc/nv_tegra_release
 
+# [NVIDIA Jetson TX1] Boot Ubuntu from SATA HDD
+# http://qiita.com/furushchev/items/a95acd598b7106fd52ba
