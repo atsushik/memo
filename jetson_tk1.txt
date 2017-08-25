@@ -17,6 +17,14 @@ sudo apt-get install bash-completion command-not-found
 #sudo update-command-not-found &>/dev/null
 #exit
 
+#####
+# https://daichiahl.wordpress.com/2016/07/18/jetson-tk1のセットアップ/
+cd ~/git
+git clone https://github.com/jetsonhacks/installGrinch.git
+cd installGrinch
+./installGrinch.sh
+sudo reboot
+
 # https://daichiahl.wordpress.com/2016/07/18/jetson-tk1%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/
 # USB3.0の有効化
 # usb_port_owner_info=0とある部分をusb_port_owner_info=2に変更
