@@ -17,7 +17,7 @@ sudo apt-get install bash-completion command-not-found
 #sudo update-command-not-found &>/dev/null
 #exit
 
-#####
+##### GRINCH KERNELのインストール (WiFimoモジュールの導入)
 # https://daichiahl.wordpress.com/2016/07/18/jetson-tk1のセットアップ/
 cd ~/git
 git clone https://github.com/jetsonhacks/installGrinch.git
