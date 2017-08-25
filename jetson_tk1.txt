@@ -1,4 +1,7 @@
 
+# Jetson TX1をVirtualBox上のUbuntu14.04からセットアップする
+# http://qiita.com/0x0c@github/items/bc2683b00617981e4468
+
 #JETSON TK1のセットアップ(JETPACK, GRINCH, ROS JADEのインストール)
 #https://daichiahl.wordpress.com/2016/07/18/jetson-tk1のセットアップ/
 
