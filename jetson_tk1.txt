@@ -1,8 +1,39 @@
 
-JETSON TK1のセットアップ(JETPACK, GRINCH, ROS JADEのインストール)
-https://daichiahl.wordpress.com/2016/07/18/jetson-tk1のセットアップ/
+#JETSON TK1のセットアップ(JETPACK, GRINCH, ROS JADEのインストール)
+#https://daichiahl.wordpress.com/2016/07/18/jetson-tk1のセットアップ/
 
+# http://elinux.org/Jetson_TK1
+# "libglx.so" is a specific file in NVIDIA's graphics driver that might get replaced by an incorrect version from Ubuntu
+sudo apt-mark hold xserver-xorg-core
+#
+#sudo apt-add-repository universe
+sudo apt-get update
+#
+sudo apt-get install bash-completion command-not-found
+#sudo apt-file update &>/dev/null
+#sudo update-command-not-found &>/dev/null
+#exit
 
+# https://daichiahl.wordpress.com/2016/07/18/jetson-tk1%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/
+# USB3.0の有効化
+# usb_port_owner_info=0とある部分をusb_port_owner_info=2に変更
+sudo gedit /boot/extlinux/extlinux.conf
+
+sudo apt-get install git screen curl
+
+sudo apt-get upgrade
+
+##### Tensorflow
+# Installing Bazel
+# https://github.com/Lisandro79/JetsonCaffe/wiki/Install-Tensorflow-on-TK1
+git clone https://github.com/bazelbuild/bazel.git  
+# Tensorflowのセットアップ
+# http://qiita.com/ebonyeye/items/78f3139968ecb23b920a#tensorflowのセットアップ
+mkdir ~/git 
+cd ~/git
+git clone --recurse-submodules https://github.com/tensorflow/tensorflow
+cd tensorflow
+./configure
 Jetson TK1 で mini PCI-Express カードによる無線LAN 接続を行う方法
 http://rabbit-note.com/2014/08/16/jetson-tk1-use-intel-7260/
 
