@@ -19,7 +19,14 @@ sudo apt-get install bash-completion command-not-found
 #sudo apt-file update &>/dev/null
 #sudo update-command-not-found &>/dev/null
 #exit
-
+#
+# If you will use the graphical environment (Unity) a lot
+# turn off the desktop shopping suggestions
+gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-amazon.scope', \
+    'more_suggestions-u1ms.scope', 'more_suggestions-populartracks.scope', 'music-musicstore.scope', \
+    'more_suggestions-ebay.scope', 'more_suggestions-ubuntushop.scope', 'more_suggestions-skimlinks.scope']"
+    
+    
 ##### GRINCH KERNELのインストール (WiFimoモジュールの導入)
 # https://daichiahl.wordpress.com/2016/07/18/jetson-tk1のセットアップ/
 cd ~/git
