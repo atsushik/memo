@@ -41,6 +41,7 @@ sudo reboot
 sudo gedit /boot/extlinux/extlinux.conf
 
 sudo apt-get install git screen curl
+sudo apt-get install chromium-browser chromium-browser-l10n chromium-bsu* chromium-c*
 
 sudo apt-get upgrade
 
