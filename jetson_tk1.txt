@@ -49,6 +49,11 @@ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 sudo apt-get install g++-4.9
 
+
+
+
+
+
 ##### Turning some CPU cores on and some off
 #http://elinux.org/Jetson/Performance
 #echo 1 > /sys/devices/system/cpu/cpu0/online
