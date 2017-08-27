@@ -27,14 +27,6 @@ gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-ama
     'more_suggestions-ebay.scope', 'more_suggestions-ubuntushop.scope', 'more_suggestions-skimlinks.scope']"
     
     
-##### GRINCH KERNELのインストール (WiFimoモジュールの導入)
-# https://daichiahl.wordpress.com/2016/07/18/jetson-tk1のセットアップ/
-cd ~/git
-git clone https://github.com/jetsonhacks/installGrinch.git
-cd installGrinch
-./installGrinch.sh
-sudo reboot
-
 ##### インストール後の初期設定
 # タイムゾーンの設定
 # http://rabbit-note.com/2014/08/15/jetson-tk1-sd-boot/
@@ -45,20 +37,18 @@ sudo apt-get update
 # コマンドが見つからなかった場合，インストールすべきパッケージが表示されるようにする
 sudo apt-get install bash-completion command-not-found
 
-
-# https://daichiahl.wordpress.com/2016/07/18/jetson-tk1%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/
-# USB3.0の有効化
-# usb_port_owner_info=0とある部分をusb_port_owner_info=2に変更
-sudo gedit /boot/extlinux/extlinux.conf
+##### GRINCH KERNELのインストール (WiFimoモジュールの導入)
+# https://daichiahl.wordpress.com/2016/07/18/jetson-tk1のセットアップ/
+cd ~/git
+git clone https://github.com/jetsonhacks/installGrinch.git
+cd installGrinch
+./installGrinch.sh
+sudo reboot
 
 sudo apt-get install git screen curl
 sudo apt-get install chromium-browser
 
 sudo apt-get upgrade
-
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo apt-get update
-sudo apt-get install g++-4.9
 
 ##### CUDA config
 # http://elinux.org/Jetson/Installing_CUDA
@@ -66,6 +56,16 @@ echo "# Add CUDA bin & library paths:" >> ~/.bashrc
 echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 source ~/.bashrc
+
+# https://daichiahl.wordpress.com/2016/07/18/jetson-tk1%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/
+# USB3.0の有効化
+# usb_port_owner_info=0とある部分をusb_port_owner_info=2に変更
+sudo gedit /boot/extlinux/extlinux.conf
+
+
+#sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+#sudo apt-get update
+#sudo apt-get install g++-4.9
 
 
 ##### 機械学習関係
