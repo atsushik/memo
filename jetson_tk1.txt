@@ -57,6 +57,35 @@ echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 source ~/.bashrc
 
+
+##### keras on tensorflow
+## install open-jdk8
+# http://qiita.com/ytkumasan/items/0a6b9e512e3dd5c08a31
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk
+## install bazel
+# https://docs.bazel.build/versions/master/install-compile-source.html
+mkdir ~/src/bazel
+cd ~/src/bazel
+wget https://github.com/bazelbuild/bazel/releases/download/0.5.4/bazel-0.5.4-dist.zip
+unzip bazel-0.5.4-dist.zip
+bash ./compile.sh
+## 手のひらスパコンでKeras-Tensorflowを使ってみる
+# http://qiita.com/ebonyeye/items/78f3139968ecb23b920a
+sudo apt-get install python-pip python-dev python-virtualenv python-gtk2-dev gfortran swig liblapack-dev
+#
+cd ~/git
+git clone --recurse-submodules https://github.com/tensorflow/tensorflow
+cd tensorflow
+./configure
+#
+sudo pip install keras
+
+
+
+
+
 # https://daichiahl.wordpress.com/2016/07/18/jetson-tk1%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/
 # USB3.0の有効化
 # usb_port_owner_info=0とある部分をusb_port_owner_info=2に変更
