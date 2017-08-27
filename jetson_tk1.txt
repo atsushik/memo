@@ -10,7 +10,8 @@ sudo shutdown -r now
 
 # http://elinux.org/Jetson_TK1
 # "libglx.so" is a specific file in NVIDIA's graphics driver that might get replaced by an incorrect version from Ubuntu
-sudo apt-mark hold xserver-xorg-core
+# 最近は問題ないみたい
+# sudo apt-mark hold xserver-xorg-core
 #
 #sudo apt-add-repository universe
 sudo apt-get update
