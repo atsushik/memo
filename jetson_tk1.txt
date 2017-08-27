@@ -58,6 +58,18 @@ echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 source ~/.bashrc
 
+##### SWAP
+# /data に mount したSDカードにスワップを作成する。
+# これをしないとbazelのコンパイル途中で死ぬ
+sudo mkdir /data
+sudo chmod a+rwx /data
+sudo mount /dev/mmcblk1p1 /data/
+cd /data
+sudo fallocate -l 4G swapfile
+sudo chmod 600 swapfile
+sudo mkswap swapfile
+sudo swapon swapfile
+swapon -s
 
 ##### keras on tensorflow
 ## install open-jdk8
@@ -72,7 +84,7 @@ mkdir ~/src/bazel
 cd ~/src/bazel
 wget https://github.com/bazelbuild/bazel/releases/download/0.5.4/bazel-0.5.4-dist.zip
 unzip bazel-0.5.4-dist.zip
-bash ./compile.sh
+time bash ./compile.sh
 ## 手のひらスパコンでKeras-Tensorflowを使ってみる
 # http://qiita.com/ebonyeye/items/78f3139968ecb23b920a
 sudo apt-get install python-pip python-dev python-virtualenv python-gtk2-dev gfortran swig liblapack-dev
