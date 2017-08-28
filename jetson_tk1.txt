@@ -77,9 +77,27 @@ swapon -s
 sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update
 sudo apt-get install openjdk-8-jdk
+## dependencies
+# http://cudamusing.blogspot.jp/2015/11/building-tensorflow-for-jetson-tk1.html
+sudo apt-get install git zip unzip autoconf automake libtool curl zlib1g-dev  
+cd ~/git
+git clone https://github.com/google/protobuf.git
+cd protobuf
+./autogen.sh 
+./configure --prefix=/usr
+make -j 4
+sudo make install
+sudo apt-get install -y maven
+cd java
+mvn package
 ## install bazel
 # https://docs.bazel.build/versions/master/install-compile-source.html
 # そこそこ時間がかかる
+cd ~/git
+git clone https://github.com/bazelbuild/bazel.git
+cd bazel
+git checkout tags/0.1.0
+
 mkdir ~/src/bazel
 cd ~/src/bazel
 wget https://github.com/bazelbuild/bazel/releases/download/0.5.4/bazel-0.5.4-dist.zip
