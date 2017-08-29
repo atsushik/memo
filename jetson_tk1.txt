@@ -99,15 +99,15 @@ cd bazel
 git checkout tags/0.1.0
 cp /usr/bin/protoc   third_party/protobuf/protoc-linux-arm32.exe
 cp ~/git/protobuf/java/core/target/protobuf-java-3.1.0.jar  third_party/protobuf/protobuf-java-3.0.0-alpha-3.jar
-time bash ./compile.sh
+time bash ./compile.sh # 54分かかった
+sudo cp -p output/bazel /usr/loical/bin/
 #
-#mkdir ~/src/bazel
-#cd ~/src/bazel
-#wget https://github.com/bazelbuild/bazel/releases/download/0.5.4/bazel-0.5.4-dist.zip
-#unzip bazel-0.5.4-dist.zip
-#cp /usr/bin/protoc   third_party/protobuf/protoc-linux-arm32.exe
-#cp ~git//protobuf/java/core/target/protobuf-java-3.0.0-beta-1.jar  third_party/protobuf/protobuf-java-3.0.0-alpha-3.jar
-#time bash ./compile.sh
+# 5th: Install "CUDA 6.5", "cuDNN v2" and "CUDA 7.0"
+# https://github.com/Lisandro79/JetsonCaffe/wiki/Install-Tensorflow-on-TK1
+#
+# 
+
+#
 ## 手のひらスパコンでKeras-Tensorflowを使ってみる
 # http://qiita.com/ebonyeye/items/78f3139968ecb23b920a
 sudo apt-get install python-pip python-dev python-virtualenv python-gtk2-dev gfortran swig liblapack-dev
