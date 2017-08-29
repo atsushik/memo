@@ -102,22 +102,53 @@ cp ~/git/protobuf/java/core/target/protobuf-java-3.1.0.jar  third_party/protobuf
 time bash ./compile.sh # 54分かかった
 sudo cp -p output/bazel /usr/loical/bin/
 #
-# 5th: Install "CUDA 6.5", "cuDNN v2" and "CUDA 7.0"
-# https://github.com/Lisandro79/JetsonCaffe/wiki/Install-Tensorflow-on-TK1
-#
-# 
-
-#
-## 手のひらスパコンでKeras-Tensorflowを使ってみる
-# http://qiita.com/ebonyeye/items/78f3139968ecb23b920a
-sudo apt-get install python-pip python-dev python-virtualenv python-gtk2-dev gfortran swig liblapack-dev
-#
+# tensorflow
+# http://cudamusing.blogspot.jp/2015/11/building-tensorflow-for-jetson-tk1.html
+sudo apt-get install python-numpy swig python-dev
 cd ~/git
 git clone --recurse-submodules https://github.com/tensorflow/tensorflow
 cd tensorflow
-./configure
+grep -Rl "lib64"| xargs sed -i 's/lib64/lib/g'
+grep -Rl "so.7.0"| xargs sed -i 's/so\.7\.0/so\.6\.5/g'
+
 #
+# 5th: Install "CUDA 6.5", "cuDNN v2" and "CUDA 7.0"
+# https://github.com/Lisandro79/JetsonCaffe/wiki/Install-Tensorflow-on-TK1
+# 
+# *Install "cuDNN v2"  
+# *access nvidia cuDNN archive and register your account
+# *download "cuDNN v2 Library for L4T (ARM) 21.1"
+tar zxvf cudnn-6.5-linux-ARM-v2.tgz  
+cd cudnn-6.5-linux-ARM-v2  
+sudo cp cudnn.h /usr/local/cuda-6.5/include/  
+sudo cp libcudnn* /usr/local/cuda-6.5/lib/  
+# *Install "CUDA 7.0"
+cd
+wget http://developer.download.nvidia.com/embedded/L4T/r24_Release_v1.0/CUDA/cuda-repo-l4t-7-0-local_7.0-76_armhf.deb
+sudo dpkg -i cuda-repo-l4t-7-0-local_7.0-76_armhf.deb 
+sudo apt-get update
+sudo apt-get install cuda-toolkit-7-0  
+cd /usr/local  
+sudo rm cuda  
+sudo ln -s cuda-6.5/ cuda
+# *Add path to .bashrc
+echo "export CPAHT=/usr/local/cuda/include:$CPATH" >> ~/.bashrc  
+echo "export PAHT=/usr/local/cuda/bin:$PATH" >> ~/.bashrc  
+echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc  
+source ~/.bashrc  
+
+# tensorflow
+git clone https://github.com/dat-ai/tensorflow-on-nvidia-jetson.git
+cd tensorflow-on-nvidia-jetson/
+sudo pip install tensorflow-0.8.0-py2-none-any.whl
+
+# keras
 sudo pip install keras
+
+
+
+
+
 
 
 
