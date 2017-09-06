@@ -77,6 +77,16 @@ swapon -s
 sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update
 sudo apt-get install openjdk-8-jdk
+# tensorflow
+git clone https://github.com/dat-ai/tensorflow-on-nvidia-jetson.git
+cd tensorflow-on-nvidia-jetson/
+sudo pip install tensorflow-0.8.0-py2-none-any.whl
+# keras
+sudo pip install keras==1.0.4
+
+
+
+
 ## dependencies
 # http://cudamusing.blogspot.jp/2015/11/building-tensorflow-for-jetson-tk1.html
 sudo apt-get install git zip unzip autoconf automake libtool curl zlib1g-dev  
@@ -141,7 +151,6 @@ source ~/.bashrc  
 git clone https://github.com/dat-ai/tensorflow-on-nvidia-jetson.git
 cd tensorflow-on-nvidia-jetson/
 sudo pip install tensorflow-0.8.0-py2-none-any.whl
-
 # keras
 sudo pip install keras==1.0.4
 
