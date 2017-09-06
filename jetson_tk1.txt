@@ -143,7 +143,7 @@ cd tensorflow-on-nvidia-jetson/
 sudo pip install tensorflow-0.8.0-py2-none-any.whl
 
 # keras
-sudo pip install keras
+sudo pip install keras==1.0.4
 
 # chainer
 pip install -U setuptools
