@@ -83,7 +83,9 @@ cd tensorflow-on-nvidia-jetson/
 sudo pip install tensorflow-0.8.0-py2-none-any.whl
 # keras
 sudo pip install keras==1.0.4
-
+sudo apt-get -y install python-scipy
+git clone https://github.com/fchollet/keras.git
+git checkout tags/1.0.4
 
 
 
