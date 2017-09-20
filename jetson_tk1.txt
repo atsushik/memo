@@ -87,6 +87,45 @@ sudo apt-get -y install python-scipy
 git clone https://github.com/fchollet/keras.git
 git checkout tags/1.0.4
 
+##### chainer
+# http://qiita.com/suisuina/items/75751a5ea4128e133dde
+# chainer==2.1.0
+pip install cython
+pip install chainer
+pip install caffe
+
+##### caffe
+# http://takesan.hatenablog.com/entry/2016/06/26/005516
+sudo apt-get install libboost-all-dev g++-4.8-multilib
+sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+git clone https://github.com/BVLC/caffe.git
+cd caffe
+cp -p Makefile.config.example Makefile.config
+#USE_CUDNN :=1 の行をコメントはずす
+# CUSTOM_CXX := g++ の行をCUSTOM_CXX := g++-4.8 に変更
+make all -j4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## dependencies
