@@ -94,6 +94,15 @@ pip install cython
 pip install chainer
 pip install caffe
 
+##### jupyter
+# http://www.cellstat.net/jetson-tk1-chainer/
+pip install jupyter
+
+
+
+
+
+
 ##### caffe
 # http://takesan.hatenablog.com/entry/2016/06/26/005516
 sudo apt-get install libboost-all-dev g++-4.8-multilib
@@ -104,7 +113,6 @@ cp -p Makefile.config.example Makefile.config
 #USE_CUDNN :=1 の行をコメントはずす
 # CUSTOM_CXX := g++ の行をCUSTOM_CXX := g++-4.8 に変更
 make all -j4
-
 
 
 
