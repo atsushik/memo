@@ -22,6 +22,6 @@ tar zxvf grammar-kit-v4.1.tar.gz
 ```
 
 ```
-cd /home/pi/git/julius-4.4.2/dictation-kit-v4.4
-/home/pi/git/julius-4.4.2/julius/julius -C main.jconf -C am-gmm.jconf -demo
+cd /home/pi/git/julius/dictation-kit-v4.4
+/home/pi/git/julius/julius/julius -C main.jconf -C am-gmm.jconf -demo
 ```
