@@ -4,6 +4,7 @@ sudo apt-get install alsa-utils sox libsox-fmt-all  alsa-oss libsdl2-dev
 ```
 #
 ```
+cd ~/git
 #wget https://github.com/julius-speech/julius/archive/v4.4.2.tar.gz
 #mv v4.4.2.tar.gz julius-v4.4.2.tar.gz
 #tar zxvf julius-v4.4.2.tar.gz
