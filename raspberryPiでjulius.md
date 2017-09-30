@@ -1,6 +1,6 @@
 # prerequesties
 ```
-sudo apt-get install alsa-utils sox libsox-fmt-all
+sudo apt-get install alsa-utils sox libsox-fmt-all  alsa-oss libalsaplayer-dev 
 ```
 #
 ```
