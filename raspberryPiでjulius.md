@@ -12,6 +12,7 @@ cd ~/git
 git clone https://github.com/julius-speech/julius.git
 cd julius
 ./configure --with-mictype=alsa --enable-words-int
+# --enable-sp-segment ショートポーズセグメンテーションを行う
 make
 ```
 
