@@ -4,11 +4,13 @@ sudo apt-get install alsa-utils sox libsox-fmt-all
 ```
 #
 ```
-wget https://github.com/julius-speech/julius/archive/v4.4.2.tar.gz
-mv v4.4.2.tar.gz julius-v4.4.2.tar.gz
-tar zxvf julius-v4.4.2.tar.gz
-cd julius-4.4.2
-./configure
+#wget https://github.com/julius-speech/julius/archive/v4.4.2.tar.gz
+#mv v4.4.2.tar.gz julius-v4.4.2.tar.gz
+#tar zxvf julius-v4.4.2.tar.gz
+#cd julius-4.4.2
+git clone https://github.com/julius-speech/julius.git
+cd julius
+./configure --with-mictype=alsa 
 make
 ```
 
