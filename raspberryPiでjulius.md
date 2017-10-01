@@ -1,6 +1,7 @@
 # prerequesties
 ```
 sudo apt-get install -y alsa-utils sox libsox-fmt-all  alsa-oss libsdl2-dev libalsaplayer-dev
+sudo apt-get install -y build-essential zlib1g-dev flex libasound2-dev libesd0-dev libsndfile1-dev
 ```
 #
 ```
@@ -30,12 +31,12 @@ cd ~/git/julius/dictation-kit-v4.4
 ```
 
 - server-client
--- server
+  - server
 ```
 cd ~/git/julius/dictation-kit-v4.4
 ~/git/julius/julius/julius -C main.jconf -C am-gmm.jconf -demo -input adinnet
 ```
--- client
+  - client
 ```
 cd ~/git/julius
 ./adintool/adintool -in mic -out adinnet -server raspi3.local
