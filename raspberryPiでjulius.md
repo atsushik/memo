@@ -1,6 +1,6 @@
 # prerequesties
 ```
-sudo apt-get install -y alsa-utils sox libsox-fmt-all  alsa-oss libsdl2-dev libalsaplayer-dev
+# sudo apt-get install -y alsa-utils sox libsox-fmt-all  alsa-oss libsdl2-dev libalsaplayer-dev
 sudo apt-get install -y build-essential zlib1g-dev flex libasound2-dev libesd0-dev libsndfile1-dev
 ```
 #
