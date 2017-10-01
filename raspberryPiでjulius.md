@@ -41,3 +41,10 @@ cd ~/git/julius/dictation-kit-v4.4
 cd ~/git/julius
 ./adintool/adintool -in mic -out adinnet -server raspi3.local
 ```
+
+## manual
+- julius
+  - https://julius.osdn.jp/refman/julius.html.ja
+- adintool
+  - https://julius.osdn.jp/juliusbook/ja/adintool.html
+
