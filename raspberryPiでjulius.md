@@ -23,7 +23,20 @@ unzip dictation-kit-v4.4.zip
 tar zxvf grammar-kit-v4.1.tar.gz
 ```
 
+- stand alone
 ```
-cd /home/pi/git/julius/dictation-kit-v4.4
-/home/pi/git/julius/julius/julius -C main.jconf -C am-gmm.jconf -demo
+cd ~/git/julius/dictation-kit-v4.4
+~/git/julius/julius/julius -C main.jconf -C am-gmm.jconf -demo
+```
+
+- server-client
+-- server
+```
+cd ~/git/julius/dictation-kit-v4.4
+~/git/julius/julius/julius -C main.jconf -C am-gmm.jconf -demo -input adinnet
+```
+-- client
+```
+cd ~/git/julius
+./adintool/adintool -in mic -out adinnet -server raspi3.local
 ```
