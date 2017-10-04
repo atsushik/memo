@@ -1,0 +1,13 @@
+# https://demotomohiro.github.io/hardware/jetson_tk1/slides/ShieldTV%20Linux.pdf
+
+# 手順
+# http://musyoku.github.io/2016/08/12/Jetson-TX1%E3%81%AE%E4%BB%A3%E3%82%8F%E3%82%8A%E3%81%ABSHIELD-Android-TV%E3%81%A7Tegra-X1%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%99%E3%82%8B/
+
+
+# boot image (https://forum.xda-developers.com/shield-tv/general/build-kernel-source-boot-to-ubuntu-t3274632)
+https://drive.google.com/file/d/0Bz5kaPQJx_AgZ3lvWWZFNmJFcmM/view
+
+# Sample Root Filesystem 28.1
+http://developer.nvidia.com/embedded/dlc/l4t-sample-root-filesystem-28-1
+# Driver Packages
+http://developer.nvidia.com/embedded/dlc/l4t-jetson-tx1-driver-package-24-2-1
