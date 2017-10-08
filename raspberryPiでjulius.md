@@ -43,7 +43,7 @@ cd ~/git/julius
 ```
 
 - server-client(DNN)
-  - server1
+  - server1
 ```
 cd ~/git/julius/dictation-kit-v4.4
 ../julius/julius -C main.jconf -C am-dnn.jconf -input vecnet -sb 80  -m 800 -lookuprange 5 -module
