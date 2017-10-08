@@ -30,8 +30,8 @@ cd ~/git/julius/dictation-kit-v4.4
 ~/git/julius/julius/julius -C main.jconf -C am-gmm.jconf -demo
 ```
 
-- server-client
-  - server
+- server-client(HMM)
+  - server
 ```
 cd ~/git/julius/dictation-kit-v4.4
 ~/git/julius/julius/julius -C main.jconf -C am-gmm.jconf -demo -input adinnet
@@ -40,6 +40,26 @@ cd ~/git/julius/dictation-kit-v4.4
 ```
 cd ~/git/julius
 ./adintool/adintool -in mic -out adinnet -server raspi3.local
+```
+
+- server-client(DNN)
+  - server1
+```
+cd ~/git/julius/dictation-kit-v4.4
+../julius/julius -C main.jconf -C am-dnn.jconf -input vecnet -sb 80  -m 800 -lookuprange 5 -module
+```
+  - server2
+```
+cd ~/git/julius/ && jcontrol/jcontrol localhost```
+  - server3
+```
+cd ~/git/julius/dictation-kit-v4.4
+python ./bin/common/dnnclient-gpu.py dnnclient.conf -module
+```
+  - client
+```
+cd ~/git/julius/dictation-kit-v4.4/
+../adintool/adintool -in mic -out vecnet -server tegra-ubuntu.local -paramtype FBANK_D_A_Z -veclen 120 -htkconf model/dnn/config.lmfb -port 5532 -cvn -cmnload model/dnn/norm -cmnnoupdate 
 ```
 
 ## manual
