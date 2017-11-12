@@ -1,0 +1,14 @@
+# https://github.com/respeaker/avs
+
+sudo apt-get install -y gstreamer1.0 gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly
+sudo apt-get install -y python-gi python-gst gir1.2-gstreamer-1.0
+sudo pip install pocketsphinx
+mkdir ~/git
+cd ~/git
+#git clone https://github.com/respeaker/avs.git
+#cd avs/
+git clone https://github.com/alexa/alexa-avs-sample-app.git
+cd alexa-avs-sample-app
+vi automated_install.sh
+# if using respeaker 2mic
+sudo amixer cset numid=3 1
