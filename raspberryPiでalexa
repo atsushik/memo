@@ -2,3 +2,6 @@
 # https://www.hackster.io/idreams/build-your-own-amazon-echo-using-a-rpi-and-respeaker-hat-7f44a0
 # https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi
 
+cd ~/git
+git clone https://github.com/alexa/alexa-avs-sample-app.git
+vim automated_install.sh
