@@ -1,0 +1,65 @@
+### prerequesties for raspberry pi
+sudo apt-get install git make
+#
+### https://github.com/nfarina/homebridge
+#1:Node v4.3.2 or greater is required. Check by running: node --version. The plugins you use may require newer versions.
+# uname -aして「armv7l」ならば＝raspi2,3ならば。 zeroはarm6なので他の方法が必要
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+node --version
+# zeroとかでも行けそうな手
+# https://qiita.com/mascii/items/77c685df65c4cbca9315
+sudo apt-get update
+sudo apt-get install -y nodejs npm
+# 古いバージョンのnpmが入ってしまった場合は↓
+#sudo npm install npm -g
+sudo npm cache clean
+sudo npm install npm n -g
+# sudo n stable
+sudo n lts
+#
+#2:Linux Only: Install the libavahi-compat-libdnssd-dev package: sudo apt-get install libavahi-compat-libdnssd-dev
+sudo apt-get install libavahi-compat-libdnssd-dev
+#
+#3:Install Homebridge using: 
+npm install -g homebridge
+#sudo npm install -g --unsafe-perm homebridge (see below)
+#
+#4:Install the plugins using: npm install -g <plugin-name>
+# https://github.com/luisiam/homebridge-cmdswitch2
+# https://github.com/PeteLawrence/homebridge-people
+# https://www.npmjs.com/package/homebridge-people-plus
+# https://www.npmjs.com/package/homebridge-netatmo
+# https://www.npmjs.com/package/homebridge-server
+# https://www.npmjs.com/package/homebridge-http-accessory
+# 
+# 
+# 
+# 
+#5:Create the config.json file.
+vim ~/.homebridge/config.json
+#
+#
+#
+#
+#
+
+### https://timleland.com/setup-homebridge-to-start-on-bootup/
+# sudo nano /etc/default/homebridge として、Gistからコピペする。（nanoでのペーストはctrl+shift+vです）
+cd /etc/default && sudo wget https://gist.githubusercontent.com/johannrichard/0ad0de1feb6adb9eb61a/raw/7defd3836f4fbe2b98ea5a9749c4413d024e9623/homebridge 
+# sudo nano /etc/systemd/system/homebridge.service として、Gistからコピペする。ただし「ExecStart=/usr/local/bin/homebridge $HOMEBRIDGE_OPTS」は、「ExecStart=/usr/bin/homebridge $HOMEBRIDGE_OPTS」に変更。
+cd /etc/systemd/system/ && sudo wget https://gist.githubusercontent.com/johannrichard/0ad0de1feb6adb9eb61a/raw/7defd3836f4fbe2b98ea5a9749c4413d024e9623/homebridge.service
+# Homebridgeというユーザを作成する。
+sudo useradd --system homebridge
+# でフォルダを作成し、作成済みだったconfig.jsonファイルをコピーする。
+sudo mkdir /var/homebridge
+sudo cp ~/.homebridge/config.json /var/homebridge/
+sudo cp -r ~/.homebridge/persist /var/homebridge
+# フォルダのアクセス権を変更する。
+sudo chmod -R 0777 /var/homebridge
+# サービスを起動。
+sudo systemctl daemon-reload
+sudo systemctl enable homebridge
+sudo systemctl start homebridge
+
+
