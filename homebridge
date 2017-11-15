@@ -13,10 +13,10 @@ sudo apt-get update
 sudo apt-get install -y nodejs npm
 # 古いバージョンのnpmが入ってしまった場合は↓
 #sudo npm install npm -g
-sudo npm cache clean
-sudo npm install npm n -g
+#sudo npm cache clean
+#sudo npm install npm n -g
 # sudo n stable
-sudo n lts
+#sudo n lts
 #
 #2:Linux Only: Install the libavahi-compat-libdnssd-dev package: sudo apt-get install libavahi-compat-libdnssd-dev
 sudo apt-get install libavahi-compat-libdnssd-dev
