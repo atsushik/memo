@@ -20,20 +20,26 @@ sudo apt-get install -y nodejs npm
 #
 #2:Linux Only: Install the libavahi-compat-libdnssd-dev package: sudo apt-get install libavahi-compat-libdnssd-dev
 sudo apt-get install libavahi-compat-libdnssd-dev
+/etc/init.d/dbus start
+/etc/init.d/avahi-daemon start
 #
 #3:Install Homebridge using: 
 #sudo npm install -g homebridge
 sudo npm install -g --unsafe-perm homebridge
+sudo npm install --unsafe-perm mdns
+cd /usr/lib/node_modules/homebridge/ && sudo npm rebuild --unsafe-perm
 #
 #4:Install the plugins using: npm install -g <plugin-name>
+# https://github.com/PeteLawrence/homebridge-people
+npm install -g homebridge-people
+# https://www.npmjs.com/package/homebridge-server
+npm install homebridge-server@latest -g
 # https://www.npmjs.com/package/homebridge-people-plus
 #sudo npm install -g homebridge-people-plus
-sudo npm install -g --unsafe-perm homebridge-people-plus
+#sudo npm install -g --unsafe-perm homebridge-people-plus
 #
 # https://github.com/luisiam/homebridge-cmdswitch2
-# https://github.com/PeteLawrence/homebridge-people
 # https://www.npmjs.com/package/homebridge-netatmo
-# https://www.npmjs.com/package/homebridge-server
 # https://www.npmjs.com/package/homebridge-http-accessory
 # 
 # 
