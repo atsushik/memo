@@ -30,10 +30,14 @@ sudo npm install --unsafe-perm mdns
 cd /usr/lib/node_modules/homebridge/ && sudo npm rebuild --unsafe-perm
 #
 #4:Install the plugins using: npm install -g <plugin-name>
+#
 # https://github.com/PeteLawrence/homebridge-people
 npm install -g homebridge-people
+#
 # https://www.npmjs.com/package/homebridge-server
-npm install homebridge-server@latest -g
+#npm install homebridge-server@latest -g
+sudo npm install -g --unsafe-perm homebridge-server@latest
+#
 # https://www.npmjs.com/package/homebridge-people-plus
 #sudo npm install -g homebridge-people-plus
 #sudo npm install -g --unsafe-perm homebridge-people-plus
