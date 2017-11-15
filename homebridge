@@ -22,12 +22,13 @@ sudo apt-get install -y nodejs npm
 sudo apt-get install libavahi-compat-libdnssd-dev
 #
 #3:Install Homebridge using: 
-sudo npm install -g homebridge
-#sudo npm install -g --unsafe-perm homebridge (see below)
+#sudo npm install -g homebridge
+sudo npm install -g --unsafe-perm homebridge
 #
 #4:Install the plugins using: npm install -g <plugin-name>
 # https://www.npmjs.com/package/homebridge-people-plus
-sudo npm install -g homebridge-people-plus
+#sudo npm install -g homebridge-people-plus
+sudo npm install -g --unsafe-perm homebridge-people-plus
 #
 # https://github.com/luisiam/homebridge-cmdswitch2
 # https://github.com/PeteLawrence/homebridge-people
