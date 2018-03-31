@@ -50,7 +50,7 @@ cd /git/julius/dictation-kit-v4.4
 ```
   - server2
 ```
-cd /git/julius/ && jcontrol/jcontrol localhost```
+cd /git/julius/ && jcontrol/jcontrol localhost
 ```
   - server3
 ```
