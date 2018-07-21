@@ -65,3 +65,17 @@ sudo npm install -g --unsafe-perm homebridge-config-ui-x
         "sudo": false
     }
 ```
+
+- 自動起動
+```
+sudo npm install -g pm2
+pm2 startup
+# Follow the instructions on screen.
+```
+
+```
+cd ~/.homebridge
+pm2 start homebridge
+pm2 save
+```
+
