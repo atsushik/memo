@@ -21,5 +21,47 @@ cat <<EOF > ~/.homebridge/config.json
   ]
 }
 EOF
+# DONT FORGET TO FIX MAC ADDRESS IN config.json
+```
 
+```
+npm install -g homebridge-people
+```
+
+- inside platforms
+```
+    {
+        "platform": "People",
+        "threshold" : 15,
+        "anyoneSensor" : true,
+        "nooneSensor" : false,
+        "webhookPort": 51828,
+        "cacheDirectory": "./.node-persist/storage",
+        "pingInterval": 10000,
+        "ignoreReEnterExitSeconds": 0,
+        "people" : [
+            {          
+                "name" : "MY_NAME",
+                "target" : "my_phone.local",                  
+                "threshold" : 15,
+                "pingInterval": 10000,
+                "ignoreReEnterExitSeconds": 0
+            }
+       ]
+   }
+```
+
+- install 
+```
+sudo npm install -g --unsafe-perm homebridge-config-ui-x
+```
+
+- inside platforms
+```
+    {
+        "platform": "config",
+        "name": "Config",
+        "port": 8080,
+        "sudo": false
+    }
 ```
