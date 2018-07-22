@@ -49,13 +49,19 @@ cat <<EOF > ~/.homebridge/config.json
             "ignoreReEnterExitSeconds": 0,
             "people" : [
                 {          
-                    "description": "homebridge-people",
                     "name" : "MY_NAME",
                     "target" : "my_phone.local",                  
                     "threshold" : 15,
                     "pingInterval": 10000,
                     "ignoreReEnterExitSeconds": 0
-                }
+                },
+                {          
+                    "name" : "MY_WIFE",
+                    "target" : "192.168.0.200",                  
+                    "threshold" : 15,
+                    "pingInterval": 10000,
+                    "ignoreReEnterExitSeconds": 0
+                },
             ]
         },
         {
@@ -63,7 +69,11 @@ cat <<EOF > ~/.homebridge/config.json
             "platform": "config",
             "name": "Config",
             "port": 8080,
-            "sudo": false
+            "sudo": false,
+            "log": {
+                "method": "file",
+                "path": "/home/pi/.pm2/logs/homebridge-out.log"
+            }
         }
     ]
 }
