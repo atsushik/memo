@@ -4,6 +4,20 @@ sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove
 sudo apt -y install screen htop git cmake
 ```
 
+# jetson-inference https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md
+```
+
+mkdir -p ~/git
+cd ~/git
+git clone https://github.com/dusty-nv/jetson-inference
+cd jetson-inference
+git submodule update --init
+mkdir build
+cd build
+cmake ../
+```
+
+
 # python
 ```
 sudo apt install python3-pip
