@@ -4,7 +4,8 @@ sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove
 sudo apt -y install screen htop git cmake
 ```
 
-# jetson-inference https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md
+# jetson-inference
+https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md
 ```
 
 mkdir -p ~/git
@@ -17,8 +18,7 @@ cd build
 cmake ../
 make
 ```
-
-## https://github.com/dusty-nv/jetson-inference/blob/master/docs/imagenet-console-2.md
+https://github.com/dusty-nv/jetson-inference/blob/master/docs/imagenet-console-2.md
 ```
 cd ~/git/jetson-inference/build/aarch64/bin
 ./imagenet-console orange_0.jpg output_0.jpg
