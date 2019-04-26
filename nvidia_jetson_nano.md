@@ -26,6 +26,7 @@ cd ~/git/jetson-inference/build/aarch64/bin
 ```
 
 # TensorFlow
+https://docs.nvidia.com/deeplearning/dgx/install-tf-xavier/index.html
 ```
 # prerequesties
 sudo apt -y install libhdf5-serial-dev hdf5-tools
