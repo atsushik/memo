@@ -15,8 +15,15 @@ git submodule update --init
 mkdir build
 cd build
 cmake ../
+make
 ```
 
+## https://github.com/dusty-nv/jetson-inference/blob/master/docs/imagenet-console-2.md
+```
+cd ~/git/jetson-inference/build/aarch64/bin
+./imagenet-console orange_0.jpg output_0.jpg
+./imagenet-console granny_smith_1.jpg output_1.jpg
+```
 
 # python
 ```
