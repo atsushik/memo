@@ -2,7 +2,7 @@
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install screen htop
+sudo apt install screen htop git cmake
 ```
 
 # python
