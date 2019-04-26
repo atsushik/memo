@@ -25,6 +25,18 @@ cd ~/git/jetson-inference/build/aarch64/bin
 ./imagenet-console granny_smith_1.jpg output_1.jpg
 ```
 
+# TensorFlow
+```
+# prerequesties
+sudo apt-get install libhdf5-serial-dev hdf5-tools
+sudo apt-get install python3-pip
+pip3 install -U pip
+sudo apt-get install zlib1g-dev zip libjpeg8-dev libhdf5-dev 
+sudo pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker grpcio six mock requests gast h5py astor termcolor
+# tensorflow
+pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu
+```
+
 # python
 ```
 sudo apt install python3-pip
