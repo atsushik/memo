@@ -40,15 +40,8 @@ pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compu
 # python
 ```
 sudo apt install python3-pip
-# pip3 install h5py
-sudo pip3 install scipy
-# pip3 install numpy
-sudo pip3 install keras
-sudo pip3 install pillow
-sudo pip3 install pandas
-sudo pip3 install scikit-learn
-sudo pip3 install matplotlib
-sudo pip3 install Jetson.GPIO
+sudo pip3 install h5py numpy
+sudo pip3 install scipy keras pillow pandas scikit-learn scikit-learn matplotlib Jetson.GPIO
 ```
 
 # tensorflow
