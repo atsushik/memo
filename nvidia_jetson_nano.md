@@ -51,11 +51,18 @@ sudo pip3 install pillow scikit-learn scikit-learn Jetson.GPIO
 
 # F200 realsense
 ```
-sudo apt-get install libusb-1.0-0-dev pkg-config
-sudo apt-get install qtcreator
+sudo apt -y install libusb-1.0-0-dev pkg-config
+sudo apt -y install qtcreator
+sudo apt -y install libxinerama-dev libglfw3-dev libxcursor-dev libgtk-3-dev
 mkdir -p ~/git
 cd ~/git
-https://github.com/IntelRealSense/librealsense.git
+git clone https://github.com/IntelRealSense/librealsense.git
+cd librealsense
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
 ```
 
 # pyTorch
