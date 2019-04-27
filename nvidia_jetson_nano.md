@@ -1,7 +1,8 @@
 # basics
 ```
-sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove
+sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove && sudo apt -y autoclean
 sudo apt -y install screen htop git cmake
+sudo apt -y install build-essential 
 ```
 
 # jetson-inference
@@ -32,15 +33,7 @@ https://docs.nvidia.com/deeplearning/dgx/install-tf-xavier/index.html
 sudo apt -y install libhdf5-serial-dev hdf5-tools
 sudo apt -y install python3-pip
 sudo apt -y install zlib1g-dev zip libjpeg8-dev libhdf5-dev 
-sudo apt -y install python3-numpy python3-scipy 
-# sudo pip3 install -U grpcio absl-py py-cpuinfo gast
-# sudo apt -y install python3-numpy python3-requests
-sudo apt -y install python3-h5py python3-astor python3-termcolor python3-six
-sudo apt -y install python3-sudo python3-portpicker python3-psutil python3-mock python3-cpuinfo
-pip3 install -U grpcio absl-py gast
-# sudo pip3 install -U grpcio absl-py gast
-#pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker grpcio six mock requests gast h5py astor termcolor
-pip3 install -U grpcio absl-py py-cpuinfo psutil portpicker grpcio six mock requests gast h5py astor termcolor
+sudo pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker grpcio six mock requests gast h5py astor termcolor
 # tensorflow
 pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu
 ```
@@ -48,8 +41,9 @@ pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compu
 # python
 ```
 sudo apt -y install python3-pip
-sudo apt -y install python3-scipy
-#sudo pip3 install scipy keras pillow pandas scikit-learn scikit-learn matplotlib Jetson.GPIO
+#sudo apt -y install python3-scipy
+sudo pip3 install scipy pandas scikit-learn matplotlib
+#sudo pip3 install scipy keras pillow pandas scikit-learn matplotlib Jetson.GPIO
 sudo apt -y install python3-keras python3-pandas python3-matplotlib
 sudo pip3 install pillow scikit-learn scikit-learn Jetson.GPIO
 ```
