@@ -37,6 +37,7 @@ sudo apt -y install python3-numpy python3-scipy
 # sudo apt -y install python3-numpy python3-requests
 sudo apt -y install python3-h5py python3-astor python3-termcolor python3-six
 sudo apt -y install python3-sudo python3-portpicker python3-psutil python3-mock python3-cpuinfo
+pip3 install -U grpcio absl-py gast
 # sudo pip3 install -U grpcio absl-py gast
 #pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker grpcio six mock requests gast h5py astor termcolor
 pip3 install -U grpcio absl-py py-cpuinfo psutil portpicker grpcio six mock requests gast h5py astor termcolor
