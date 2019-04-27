@@ -49,6 +49,17 @@ sudo apt -y install python3-keras python3-pandas python3-matplotlib
 sudo pip3 install pillow scikit-learn scikit-learn Jetson.GPIO
 ```
 
+# jupyter
+```
+sudo apt -y install jupyter-notebook
+jupyter-notebook --generate-config
+cat >>  ~/.jupyter/jupyter_notebook_config.py << EOL
+c.NotebookApp.ip = '*'
+c.NotebookApp.open_browser = False
+c.NotebookApp.password_required = False
+c.NotebookApp.token = ''
+```
+
 # F200 realsense
 ```
 sudo apt -y install libusb-1.0-0-dev pkg-config
