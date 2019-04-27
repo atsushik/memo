@@ -63,6 +63,11 @@ cd build
 cmake ..
 make
 sudo make install
+cd ..
+sudo cp config/99-realsense-libusb.rules /etc/udev/rules.d/
+sudo udevadm control --reload-rules && udevadm trigger
+./scripts/patch-uvcvideo-16.04.simple.sh
+sudo modprobe uvcvideo
 ```
 
 # pyTorch
