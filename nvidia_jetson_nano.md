@@ -32,11 +32,14 @@ https://docs.nvidia.com/deeplearning/dgx/install-tf-xavier/index.html
 sudo apt -y install libhdf5-serial-dev hdf5-tools
 sudo apt -y install python3-pip
 sudo apt -y install zlib1g-dev zip libjpeg8-dev libhdf5-dev 
-#sudo apt -y install python3-numpy
+sudo apt -y install python3-numpy python3-scipy 
 # sudo pip3 install -U grpcio absl-py py-cpuinfo gast
-# sudo apt -y install python3-numpy python3-requests python3-h5py python3-astor python3-termcolor python3-six python3-sudo python3-portpicker python3-psutil python3-mock python3-cpuinfo
+# sudo apt -y install python3-numpy python3-requests python3-h5py
+# sudo apt -y install python3-astor python3-termcolor python3-six
+# sudo apt -y install python3-sudo python3-portpicker python3-psutil python3-mock python3-cpuinfo
 # sudo pip3 install -U grpcio absl-py gast
-pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker grpcio six mock requests gast h5py astor termcolor
+#pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker grpcio six mock requests gast h5py astor termcolor
+pip3 install -U grpcio absl-py py-cpuinfo psutil portpicker grpcio six mock requests gast h5py astor termcolor
 # tensorflow
 pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu
 ```
