@@ -32,7 +32,10 @@ https://docs.nvidia.com/deeplearning/dgx/install-tf-xavier/index.html
 sudo apt -y install libhdf5-serial-dev hdf5-tools
 sudo apt -y install python3-pip
 sudo apt -y install zlib1g-dev zip libjpeg8-dev libhdf5-dev 
-sudo pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker grpcio six mock requests gast h5py astor termcolor
+sudo apt -y install python3-numpy
+# sudo pip3 install -U grpcio absl-py py-cpuinfo gast
+sudo apt -y install python3-numpy python3-requests python3-h5py python3-astor python3-termcolor python3-six python3-portpicker python3-psutil python3-mock python3-cpuinfo
+sudo pip3 install -U grpcio absl-py gast
 # tensorflow
 pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu
 ```
@@ -40,14 +43,19 @@ pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compu
 # python
 ```
 sudo apt -y install python3-pip
-sudo pip3 install h5py numpy
-sudo pip3 install scipy keras pillow pandas scikit-learn scikit-learn matplotlib Jetson.GPIO
+sudo apt -y install python3-scipy
+#sudo pip3 install scipy keras pillow pandas scikit-learn scikit-learn matplotlib Jetson.GPIO
+sudo apt -y install python3-keras python3-pandas python3-matplotlib
+sudo pip3 install pillow scikit-learn scikit-learn Jetson.GPIO
 ```
 
-# tensorflow
+# F200 realsense
 ```
-#sudo apt-get install libhdf5-serial-dev hdf5-tools
-#pip3 install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu==1.13.1+nv19.3 --user
+sudo apt-get install libusb-1.0-0-dev pkg-config
+sudo apt-get install qtcreator
+mkdir -p ~/git
+cd ~/git
+https://github.com/IntelRealSense/librealsense.git
 ```
 
 # pyTorch
