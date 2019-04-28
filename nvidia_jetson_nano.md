@@ -46,7 +46,11 @@ sudo apt -y install libblas-dev liblapack-dev
 sudo apt -y install gfortran
 sudo pip3 install -U scipy 
 # 
-sudo pip3 install -U pandas scikit-learn matplotlib
+sudo pip3 install -U pandas scikit-learn
+# matplotlib
+sudo apt -y install libfreetype6-dev libpng-dev pkg-config
+sudo pip3 install -U matplotlib
+# 
 sudo pip3 install -U keras
 sudo pip3 install pillow Jetson.GPIO Jetson.GPIO
 # sudo apt -y install python3-keras python3-pandas python3-matplotlib
