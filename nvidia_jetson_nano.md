@@ -41,11 +41,15 @@ pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compu
 # python
 ```
 sudo apt -y install python3-pip
-#sudo apt -y install python3-scipy
-sudo pip3 install -U scipy pandas scikit-learn matplotlib
-#sudo pip3 install scipy keras pillow pandas scikit-learn matplotlib Jetson.GPIO
-sudo apt -y install python3-keras python3-pandas python3-matplotlib
-sudo pip3 install pillow scikit-learn scikit-learn Jetson.GPIO
+# scipy
+sudo apt -y install libblas-dev liblapack-dev
+sudo apt -y install gfortran
+sudo pip3 install -U scipy 
+# 
+sudo pip3 install -U pandas scikit-learn matplotlib
+sudo pip3 install -U keras
+sudo pip3 install pillow Jetson.GPIO Jetson.GPIO
+# sudo apt -y install python3-keras python3-pandas python3-matplotlib
 ```
 
 # jupyter
