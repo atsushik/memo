@@ -62,6 +62,7 @@ sudo apt -y install libpng-dev libjpeg8-dev libfreetype6-dev libxft-dev
 sudo pip3 install -U jupyterlab
 # node.js is required for extensions
 sudo apt install -y nodejs
+sudo pip3 install -U jupyter-git jupyter-tensorboard
 # 
 jupyter-notebook --generate-config
 cat >>  ~/.jupyter/jupyter_notebook_config.py << EOL
