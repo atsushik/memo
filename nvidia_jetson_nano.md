@@ -57,12 +57,13 @@ sudo pip3 install -U matplotlib
 
 # jupyter
 ```
-sudo apt -y install jupyter-notebook
+# sudo apt -y install jupyter-notebook
+sudo apt -y install libpng-dev libjpeg8-dev libfreetype6-dev libxft-dev
+sudo pip3 install -U jupyterlab
 jupyter-notebook --generate-config
 cat >>  ~/.jupyter/jupyter_notebook_config.py << EOL
 c.NotebookApp.ip = '*'
 c.NotebookApp.open_browser = False
-c.NotebookApp.password_required = False
 c.NotebookApp.token = ''
 ```
 
