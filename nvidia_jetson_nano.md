@@ -71,6 +71,16 @@ c.NotebookApp.open_browser = False
 c.NotebookApp.token = ''
 ```
 
+# media
+```
+sudo apt install autofs smbclient cifs-utils 
+sudo apt install ffmpeg gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
+sudo systemctl stop autofs.service
+sudo mkdir -p /Volume/media
+sudo systemctl start autofs.service
+```
+
+
 # F200 realsense
 ```
 sudo apt -y install libusb-1.0-0-dev pkg-config
